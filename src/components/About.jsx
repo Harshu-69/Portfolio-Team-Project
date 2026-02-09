@@ -12,12 +12,15 @@ const techs = [
 
 const About = () => {
   return (
-    <section id="about" className="py-28 px-6">
+    <section
+      id="about"
+      className="py-28 px-6 bg-[#0b0f17]"
+    >
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
 
         {/* LEFT CONTENT */}
         <div>
-          <p className="text-sm tracking-widest text-primary mb-4">
+          <p className="text-sm tracking-widest text-[rgb(179,170,152)] mb-4">
             ABOUT ME
           </p>
 
@@ -25,19 +28,19 @@ const About = () => {
             A bit about myself
           </h2>
 
-          <p className="text-textSecondary leading-relaxed mb-4">
-            Hello! I'm <span className="text-primary">Harsh Patel</span>, a
+          <p className="leading-relaxed mb-4 text-[rgb(179,170,152)]">
+            Hello! I'm <span className="text-white">Harsh Patel</span>, a
             frontend developer passionate about building clean, responsive, and
             user-friendly web interfaces.
           </p>
 
-          <p className="text-textSecondary leading-relaxed mb-4">
+          <p className="leading-relaxed mb-4 text-[rgb(179,170,152)]">
             I love transforming ideas into real digital experiences using
             modern tools like React, Next.js, and Tailwind CSS. My main focus is
             creating fast, accessible, and visually engaging websites.
           </p>
 
-          <p className="text-textSecondary leading-relaxed mb-8">
+          <p className="leading-relaxed mb-8 text-[rgb(179,170,152)]">
             Currently, I'm continuously improving my skills by working on
             projects, exploring new technologies, and following best
             development practices.
@@ -52,8 +55,8 @@ const About = () => {
             {techs.map((tech, i) => (
               <span
                 key={i}
-                className="px-4 py-1.5 rounded-full border border-primary/30
-                text-primary text-sm bg-primary/5"
+                className="px-4 py-1.5 rounded-full border border-[rgb(179,170,152)]/30
+                text-[rgb(179,170,152)] text-sm bg-white/5"
               >
                 {tech}
               </span>
@@ -66,16 +69,16 @@ const About = () => {
 
           {/* Stats Cards */}
           <div className="grid grid-cols-2 gap-6">
-            <div className="bg-bg/80 border border-white/10 rounded-xl p-6">
-              <p className="text-primary text-2xl font-bold">10K+</p>
-              <p className="text-textSecondary text-sm mt-1">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <p className="text-white text-2xl font-bold">10K+</p>
+              <p className="text-[rgb(179,170,152)] text-sm mt-1">
                 Lines of code
               </p>
             </div>
 
-            <div className="bg-bg/80 border border-white/10 rounded-xl p-6">
-              <p className="text-primary text-2xl font-bold">∞</p>
-              <p className="text-textSecondary text-sm mt-1">
+            <div className="bg-white/5 border border-white/10 rounded-xl p-6">
+              <p className="text-white text-2xl font-bold">∞</p>
+              <p className="text-[rgb(179,170,152)] text-sm mt-1">
                 Cups of coffee
               </p>
             </div>

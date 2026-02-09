@@ -15,7 +15,6 @@ function App() {
           element={
             <>
               <Navbar />
-              
               <Experience />
               <Projects />
               <Skills />
@@ -23,11 +22,9 @@ function App() {
             </>
           }
         />
-
         <Route path="/projects/all" element={<AllProjects />} />
       </Routes>
     </div>
   );
 }
-
 export default App;

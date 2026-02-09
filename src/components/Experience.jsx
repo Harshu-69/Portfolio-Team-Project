@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const experiences = [
   {
     company: "Nipralo Technologies",
@@ -24,23 +26,21 @@ const experiences = [
   },
 ];
 
-import { useState } from "react";
-
 const Experience = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="min-h-screen bg-[#0b0f17] text-white py-24">
+    <section id="experience" className="py-28 px-6 bg-[#0b0f17] text-white">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <p className="text-sm tracking-widest text-[#c9a46c] mb-2">
+        <p className="text-sm tracking-widest text-[#E76E50] mb-2">
           WHERE I'VE WORKED
         </p>
         <h2 className="text-4xl font-bold mb-16">My Experience</h2>
 
-        <div className="flex gap-12">
+        <div className="flex flex-col md:flex-row gap-12">
           {/* Left Tabs */}
-          <div className="relative">
+          <div className="relative md:w-1/4">
             <div className="absolute left-0 top-0 h-full w-0.5 bg-white/10" />
             <ul className="flex flex-col gap-1">
               {experiences.map((exp, i) => (
@@ -64,10 +64,11 @@ const Experience = () => {
           <div className="flex-1">
             <h3 className="text-xl font-semibold mb-1">
               {experiences[active].role}{" "}
-              <span className="text-[#E76E50] ">
+              <span className="text-[#E76E50]">
                 @ {experiences[active].company}
               </span>
             </h3>
+
             <p className="text-sm text-gray-400 mb-6">
               {experiences[active].duration}
             </p>

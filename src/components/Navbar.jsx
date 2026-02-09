@@ -4,10 +4,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const links = [
-    { name: "Home", href: "#home" },
+    
     { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
+    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
     { name: "Contact", href: "#contact" },
   ];
 

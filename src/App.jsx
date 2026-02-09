@@ -1,19 +1,19 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
 import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Experience from "./components/Experience";
+
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 function App() {
   return (
-    <div className="bg-[#020617] text-white">
-      <Navbar />
-      <Hero />
-      <Skills />
+    <div className="bg-[#111] text-white">
+      <Experience />
+      {/* <Navbar /> */}
+      {/* <Hero /> */}
       <Projects />
+      <Skills />
       <Contact />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

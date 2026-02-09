@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
     <motion.div
       whileHover="hover"
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="bg-[#111827] group rounded-2xl  overflow-hidden border border-white/10 hover:border-[#D2654A]/50 border-white/10"
+      className="bg-[#101318] group rounded-2xl  overflow-hidden border border-white/10 hover:border-[#D2654A]/50 border-white/10"
     >
       {/* Image */}
       <div className="overflow-hidden">
@@ -53,10 +53,10 @@ const ProjectCard = ({ project }) => {
 
         {/* Icons */}
         <div className="flex gap-4 pt-4">
-          <a className="p-2 rounded-full bg-white/5 hover:bg-orange-500 transition">
+          <a className="p-2 rounded-full bg-white/5 hover:bg-[#D2654A] transition">
             <FiGithub />
           </a>
-          <a className="p-2 rounded-full bg-white/5 hover:bg-orange-500 transition">
+          <a className="p-2 rounded-full bg-white/5 hover:bg-[#D2654A] transition">
             <FiExternalLink />
           </a>
         </div>

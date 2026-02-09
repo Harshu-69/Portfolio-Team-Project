@@ -9,9 +9,8 @@ function Projects() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<FeaturedProjects />}></Route>
-
-        <Route path="/projects/all" element={<AllProjects />}></Route>
+        <Route path="/" element={<FeaturedProjects />} />
+        <Route path="/projects/all" element={<AllProjects />} />
       </Routes>
     </>
   );

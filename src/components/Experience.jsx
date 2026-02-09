@@ -30,18 +30,21 @@ const Experience = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="min-h-screen bg-[#0b0f17] text-white py-24">
+    <section
+      className="min-h-[70vh] bg-[#15171E] text-[#F5F3F0
+    ] py-10"
+    >
       <div className="max-w-6xl mx-auto">
-        {/* Heading */}
-        <p className="text-sm tracking-widest text-[#c9a46c] mb-2">
+        <p className="text-sm tracking-widest text-[#A19A8A] font-semibold mb-2">
           WHERE I'VE WORKED
         </p>
-        <h2 className="text-4xl font-bold mb-16">My Experience</h2>
+        <h2 className="text-4xl text-[#F5F3F0] font-semibold mb-16">
+          My Experience
+        </h2>
 
         <div className="flex gap-12">
-          {/* Left Tabs */}
           <div className="relative">
-            <div className="absolute left-0 top-0 h-full w-0.5 bg-white/10" />
+            <div className="absolute left-0 top-0 h-34 w-0.5 bg-white/10" />
             <ul className="flex flex-col gap-1">
               {experiences.map((exp, i) => (
                 <li
@@ -51,7 +54,7 @@ const Experience = () => {
                     ${
                       active === i
                         ? "bg-white/5 text-[#E76E50] border-l-2 border-[#E76E50]"
-                        : "text-gray-400 hover:bg-white/5"
+                        : "text-gray- hover:bg-white/5"
                     }`}
                 >
                   {exp.company}
@@ -60,21 +63,20 @@ const Experience = () => {
             </ul>
           </div>
 
-          {/* Right Content */}
           <div className="flex-1">
             <h3 className="text-xl font-semibold mb-1">
-              {experiences[active].role}{" "}
+              {experiences[active].role}
               <span className="text-[#E76E50] ">
                 @ {experiences[active].company}
               </span>
             </h3>
-            <p className="text-sm text-gray-400 mb-6">
+            <p className="text-sm text-[#A19A8A] mb-6">
               {experiences[active].duration}
             </p>
 
             <ul className="space-y-4">
               {experiences[active].points.map((point, i) => (
-                <li key={i} className="flex gap-3 text-gray-300">
+                <li key={i} className="flex gap-3 text-[#A19A8A]">
                   <span className="text-[#E76E50] mt-1">▸</span>
                   <span>{point}</span>
                 </li>

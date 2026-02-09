@@ -6,3 +6,19 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* used in Contact.jsx */
+
+input:focus-visible {
+  outline: 1px solid #d2654a;
+  outline-offset: 1px;
+}
+
+textarea:focus-visible {
+  outline: 1px solid #d2654a;
+  outline-offset: 1px;
+}
+
+text-muted-foreground {
+  color: #b3aa98;
+}

@@ -14,7 +14,7 @@ function Skills() {
 
   return (
     <div className="px-6 py-32  bg-[#171A21]  ">
-      <section className="m-w-6xl mx-auto h-[100vh] ">
+      <section className="m-w-6xl mx-auto h-screen ">
         <div className="flex items-center gap-2 text-center flex-col">
           <h1 className="text-5xl font-semibold tracking-tight">
             Skills & Expertise

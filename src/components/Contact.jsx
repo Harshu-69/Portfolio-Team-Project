@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { CiMail } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
 import { register } from "./../../node_modules/@vitejs/plugin-react/dist/refresh-runtime";
+import "../index.css";
 
 function Contact() {
   const [formData, setFormData] = useState([]);
@@ -20,18 +21,18 @@ function Contact() {
       onClick={handleSubmit(submitHandler)}
       className="px-6 py-32  bg-[#171A21]  "
     >
-      <section className="m-w-6xl mx-auto h-[100vh] ">
+      <section className="m-w-6xl mx-auto h-screen ">
         <div className="flex items-center gap-2 text-center flex-col">
           <h1 className="text-5xl font-semibold tracking-tight">
-            Skills & Expertise
+            Get In Touch
           </h1>
           <h3 className="text-lg font-normal tracking-tight text-[#B3AA98] ">
-            Technologies and tools I use to bring ideas to life
+            Have a project in mind or just want to chat? Feel free to reach out!
           </h3>
         </div>
 
         <div className="center-div flex mt-15 items-center justify-center gap-10">
-          <div className="technical-skills w-[32vw] rounded-xl px-4 py-6 border border-zinc-500/30  bg-[#191D24]  h-[60vh]  mb-2">
+          <div className="technical-skills w-[32vw] rounded-xl px-4 py-6 border border-zinc-500/30  bg-[#191D24]  h-[65vh]  mb-2">
             <h4 className="text-[1.190rem] font-semibold mb-4">
               Let's Connect
             </h4>
@@ -75,7 +76,7 @@ function Contact() {
                   <h3 className="">Name</h3>
                   <input
                     {...register("name")}
-                    className=" border active:border-[#D2654A]  text-[1rem] py-2 px-1 rounded-sm  "
+                    className="   text-[1rem] py-2 px-1 rounded-sm  "
                     type="name"
                     placeholder="John Doe"
                   />
@@ -85,7 +86,7 @@ function Contact() {
                   <h3 className="">Email</h3>
                   <input
                     {...register("email")}
-                    className=" border active:border-[#D2654A]  text-[1rem] py-2 px-1 rounded-sm  "
+                    className="  active:border-[#D2654A]  text-[1rem] py-2 px-1 rounded-sm  "
                     type="name"
                     placeholder="john@example.com"
                   />
@@ -95,7 +96,7 @@ function Contact() {
                   <h3 className="">Message</h3>
                   <textarea
                     {...register("description")}
-                    className="overflow-y-auto no-scrollbar text-[1rem] block h-30 "
+                    className="overflow-y-auto no-scrollbar rounded-sm p-2 text-[1rem] block h-30 "
                     placeholder="Tell me about your project..."
                     id=""
                   ></textarea>

@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
+import { FiArrowLeft } from "react-icons/fi";
 
 const AllProjects = () => {
   return (
@@ -17,13 +18,12 @@ const AllProjects = () => {
           ))}
         </div>
 
-        <div className="flex items-center justify-center">
+        <div className="flex mt-10 items-center justify-center">
           <Link
             to="/"
-            className="px-8 py-3 rounded-full bg-orange-500 text-black font-medium hover:scale-105 transition"
+            className="px-8 py-3 rounded-full bg-[#e76e50] flex text-lg items-center gap-2 text-[#111]  font-medium hover:bg-[#d2654ae2] transition-all duration-300"
           >
-            {" "}
-            Back to Home ↗
+            <FiArrowLeft className="mt-[0.2rem] text-xl" /> Back to Home
           </Link>
         </div>
       </div>

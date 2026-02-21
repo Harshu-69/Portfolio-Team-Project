@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProgressBar from "./skills/ProgressBar";
 
-function Skills() {
+function Skills({ darkMode }) {
   const [data, setData] = useState([
     { lang: "HTML5", percent: 95 },
     { lang: "CSS3", percent: 90 },
@@ -13,19 +13,25 @@ function Skills() {
   ]);
 
   return (
-    <div className="px-6 py-32  bg-[#171A21]  ">
+    <div className="px-6 py-32    ">
       <section className="m-w-6xl mx-auto h-screen ">
         <div className="flex items-center gap-2 text-center flex-col">
-          <h1 className="text-5xl font-semibold tracking-tight">
+          <h1 className={darkMode ? "text-5xl text-white font-semibold tracking-tight" : "text-5xl text-black font-semibold tracking-tight" } >
             Skills & Expertise
           </h1>
-          <h3 className="text-lg font-normal tracking-tight text-[#B3AA98] ">
+          <h3 className="text-lg font-normal tracking-tight  ">
             Technologies and tools I use to bring ideas to life
           </h3>
         </div>
 
         <div className="center-div flex mt-15 items-center justify-center gap-10">
-          <div className="technical-skills w-[32vw] rounded-xl px-4 py-6 border border-zinc-500/30  bg-[#191D24]  h-[70vh]  mb-2">
+          <div
+            className={
+              darkMode
+                ? "technical-skills w-[32vw] rounded-xl px-4 py-6 border border-zinc-500/30  bg-[#191D24]  h-[70vh]  mb-2"
+                : "technical-skills w-[32vw] rounded-xl px-4 py-6 border border-zinc-500/30  bg-[#f1f1f1]  h-[70vh]  mb-2"
+            }
+          >
             <h4 className="text-[1.190rem] font-semibold mb-4">
               Technical Skills
             </h4>
@@ -34,7 +40,13 @@ function Skills() {
             ))}
           </div>
           <div className="right-div flex gap-10 h-[70vh] flex-col ">
-            <div className="other-skills flex flex-col items-start  justify-center gap-2  bg-[#191D24] border border-zinc-500/30 h-[20vh] px-8 w-[35vw] rounded-xl py-20 ">
+            <div
+              className={
+                darkMode
+                  ? "other-skills flex flex-col bg-[#191D24]  items-start  justify-center gap-2   border border-zinc-500/30 h-[20vh] px-8 w-[35vw] rounded-xl py-20"
+                  : "other-skills flex flex-col bg-[#f1f1f1]  items-start  justify-center gap-2   border border-zinc-500/30 h-[20vh] px-8 w-[35vw] rounded-xl py-20"
+              }
+            >
               <h3 className="text-[1.070rem] mb-2 tracking-tight font-semibold">
                 Other Skills
               </h3>
@@ -50,8 +62,11 @@ function Skills() {
               </div>
             </div>
             <div
-              className="currently-learning flex flex-col items-start  justify-center 
-            gap-4 bg-[#191D24] border border-zinc-500/30 h-[20vh] px-8 w-xl rounded-xl py-20  "
+              className={
+                darkMode
+                  ? "currently-learning flex flex-col items-start  justify-center gap-4 bg-[#191D24] border border-zinc-500/30 h-[20vh] px-8 w-xl rounded-xl py-20  "
+                  : "currently-learning flex flex-col items-start  justify-center gap-4 bg-[#f1f1f1] border border-zinc-500/30 h-[20vh] px-8 w-xl rounded-xl py-20  "
+              }
             >
               <h3 className="text-[1.070rem] tracking-tight font-semibold">
                 Currently Learning

@@ -3,15 +3,15 @@ import { projects } from "../data/projects";
 import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 
-const FeaturedProjects = ({ onViewMore }) => {
+const FeaturedProjects = ({ darkMode,onViewMore }) => {
   return (
-    <section className="px-6 py-10 bg-[#0b0f17] text-white">
+    <section className="px-6 py-10  ">
       <div className="max-w-6xl mx-auto">
         <p className="text-sm tracking-widest text-[#D2654A] mb-2">
           WHAT I'VE BUILT
         </p>
-        <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-        <p className="text-gray-400 mb-12 max-w-xl">
+        <h2 className={darkMode ? "text-4xl text-white font-bold mb-4" : "text-4xl text-black font-bold mb-4" }  >Featured Projects</h2>
+        <p className=" mb-12 max-w-xl">
           Handpicked projects showcasing my expertise in building modern,
           scalable web applications.
         </p>

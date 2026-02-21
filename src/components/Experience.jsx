@@ -30,15 +30,12 @@ const Experience = () => {
   const [active, setActive] = useState(0);
 
   return (
-    <section
-      className="min-h-[70vh] bg-[#15171E] text-[#F5F3F0
-    ] py-10"
-    >
+    <section className="min-h-[70vh]  py-10">
       <div className="max-w-6xl mx-auto">
-        <p className="text-sm tracking-widest text-[#A19A8A] font-semibold mb-2">
+        <p className="text-sm tracking-widest  font-semibold mb-2">
           WHERE I'VE WORKED
         </p>
-        <h2 className="text-4xl text-[#F5F3F0] font-semibold mb-16">
+        <h2 className="text-4xl  font-semibold mb-16">
           My Experience
         </h2>
 
@@ -70,13 +67,13 @@ const Experience = () => {
                 @ {experiences[active].company}
               </span>
             </h3>
-            <p className="text-sm text-[#A19A8A] mb-6">
+            <p className="text-sm  mb-6">
               {experiences[active].duration}
             </p>
 
             <ul className="space-y-4">
               {experiences[active].points.map((point, i) => (
-                <li key={i} className="flex gap-3 text-[#A19A8A]">
+                <li key={i} className="flex gap-3 ">
                   <span className="text-[#E76E50] mt-1">▸</span>
                   <span>{point}</span>
                 </li>

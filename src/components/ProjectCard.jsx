@@ -1,7 +1,7 @@
 import { motion, scale } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ darkMode, project }) => {
   const parent = {
     hover: { y: -6 },
   };
@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
     <motion.div
       whileHover="hover"
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className="bg-[#101318] group rounded-2xl  overflow-hidden border border-white/10 hover:border-[#D2654A]/50 border-white/10"
+      className=" group rounded-2xl  overflow-hidden border border-gray-400/30 hover:border-[#D2654A]/50 "
     >
       {/* Image */}
       <div className="overflow-hidden">
@@ -37,14 +37,18 @@ const ProjectCard = ({ project }) => {
           {project.title}
         </h3>
 
-        <p className="text-sm text-gray-400">{project.desc}</p>
+        <p className="text-sm">{project.desc}</p>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 pt-2">
           {project.tech.map((t, i) => (
             <span
               key={i}
-              className="text-xs px-3 py-1 rounded-full bg-white/5 text-gray-300"
+              className={
+                darkMode
+                  ? "text-xs px-3 py-1 rounded-full  bg-white/20 "
+                  : "text-xs px-3 py-1 rounded-full  bg-black/20  "
+              }
             >
               {t}
             </span>
@@ -53,10 +57,22 @@ const ProjectCard = ({ project }) => {
 
         {/* Icons */}
         <div className="flex gap-4 pt-4">
-          <a className="p-2 rounded-full bg-white/5 hover:bg-[#D2654A] transition">
+          <a
+            className={
+              darkMode
+                ? "p-2 rounded-full  bg-white/10 hover:bg-[#D2654A] transition"
+                : "p-2 rounded-full bg-black/10  hover:bg-[#D2654A] transition"
+            }
+          >
             <FiGithub />
           </a>
-          <a className="p-2 rounded-full bg-white/5 hover:bg-[#D2654A] transition">
+          <a
+            className={
+              darkMode
+                ? "p-2 rounded-full bg-white/10 hover:bg-[#D2654A] transition"
+                : "p-2 rounded-full bg-black/10 hover:bg-[#D2654A] transition"
+            }
+          >
             <FiExternalLink />
           </a>
         </div>

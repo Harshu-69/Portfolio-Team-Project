@@ -1,10 +1,30 @@
 @import "tailwindcss";
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 html {
   scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: font1;
+  src: url(./assets/fonts/fontt1.ttf);
+}
+
+@font-face {
+  font-family: font2;
+  src: url(./assets/fonts/font2.ttf);
+}
+
+@font-face {
+  font-family: font3;
+  src: url(./assets/fonts/font3.ttf);
+}
+
+@font-face {
+  font-family: font4;
+  src: url(./assets/fonts/font4.ttf);
 }
 
 /* used in Contact.jsx */
